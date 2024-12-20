@@ -1,0 +1,74 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+}
+:root {
+    --color-white: #e6e6e6;
+    --color-black: #333333;
+    --bg-color-white: #e6e6e6;
+    --bg-color-black: #333333;
+    --bg-color-true-black: #191919;
+}
+html {
+    font-family: "Oxanium", serif;
+    font-optical-sizing: auto;
+    font-size: 10px;
+    color: var(--color-white);
+    overflow: hidden;
+}
+body {
+    padding: 2rem;
+    background: conic-gradient(from 240deg at 30% 40%, var(--bg-color-white), var(--bg-color-true-black));
+}
+main {
+    display: flex;
+    height: calc(100dvh - 4rem);
+    background: conic-gradient(from 240deg at 30% 40%, var(--bg-color-white), var(--bg-color-true-black));
+    border: 1px solid var(--bg-color-white);
+}
+.white_cover {
+    position: relative;
+    padding: 2rem;
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.my-name {
+    position: absolute;
+    left: 2rem;
+    > hgroup {
+        > h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+        }
+    }
+    > ul {
+        margin: 3rem 0 0 1.6rem;
+        > li {
+            line-height: 2;
+        }
+    }
+}
+.my-description {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50%;
+    max-width: 240px;
+    height: 80%;
+    text-align: right;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    > h2 {
+        font-size: 2rem;
+    }
+    > p {
+        font-size: 1.6rem;
+    }
+}
