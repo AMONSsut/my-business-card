@@ -22,18 +22,18 @@ html {
 }
 body {
     position: relative;
-    padding: 2rem;
-    background: conic-gradient(from 240deg at 30% 40%, var(--bg-color-white), var(--bg-color-true-black));
+    padding: 1rem;
+    background: conic-gradient(from 240deg at 30% 70%, var(--bg-color-white), var(--bg-color-true-black));
 }
 main {
     display: flex;
-    height: calc(100dvh - 4rem);
-    background: conic-gradient(from 240deg at 30% 40%, var(--bg-color-white), var(--bg-color-true-black));
+    height: calc(100dvh - 2rem);
+    background: conic-gradient(from 240deg at 30% 70%, var(--bg-color-white), var(--bg-color-true-black));
     border: 1px solid var(--bg-color-white);
 }
 .white_cover {
     position: relative;
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 2rem 1rem 1rem 2rem;
     flex: 1;
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
@@ -43,10 +43,12 @@ main {
     > hgroup {
         > h1 {
             font-size: 2.8rem;
+            font-weight: 700;
             line-height: 1;
         }
         > p {
             font-size: 1.4rem;
+            font-style: italic;
         }
     }
     > ul {
@@ -67,7 +69,6 @@ main {
     right: 1rem;
     width: 50%;
     max-width: 240px;
-    height: 80%;
     text-align: right;
     overflow-y: scroll;
     &::-webkit-scrollbar {
@@ -76,7 +77,26 @@ main {
     > h2 {
         font-size: 2rem;
     }
-    > p {
+    > details {
         font-size: 1.6rem;
+        cursor: pointer;
+        &[open] {
+            height: calc(100vh - (7rem + 72px));
+            > summary {
+                text-decoration: line-through;
+            }
+        }
+        > summary {
+            font-size: 1.4rem;
+        }
+        > p > strong {
+            font-weight: 700;
+        }
     }
+}
+footer {
+    font-style: italic;
+    position: absolute;
+    left: 3rem;
+    bottom: 2rem;
 }
