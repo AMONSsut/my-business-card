@@ -4,6 +4,8 @@
     padding: 0;
     font-weight: 200;
 }
+/* color
+---------------------------------------- */
 :root {
     --color-white: #e6e6e6;
     --color-black: #333333;
@@ -19,6 +21,7 @@ html {
     overflow: hidden;
 }
 body {
+    position: relative;
     padding: 2rem;
     background: conic-gradient(from 240deg at 30% 40%, var(--bg-color-white), var(--bg-color-true-black));
 }
@@ -30,33 +33,38 @@ main {
 }
 .white_cover {
     position: relative;
-    padding: 2rem;
+    padding: 2rem 1rem 1rem 1rem;
     flex: 1;
     background-color: rgba(0, 0, 0, 0.1);
-    /* background-color: rgba(255, 255, 255, 0.2); */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 .my-name {
-    position: absolute;
-    left: 2rem;
     > hgroup {
         > h1 {
             font-size: 2.8rem;
-            line-height: 1.2;
+            line-height: 1;
+        }
+        > p {
+            font-size: 1.4rem;
         }
     }
     > ul {
-        margin: 3rem 0 0 1.6rem;
+        margin: 2rem 0 0 1.6rem;
         > li {
-            line-height: 2;
+            font-size: 1.4rem;
+            line-height: 1.5;
+            > ul {
+                margin-left: 1.6rem;
+                margin-bottom: 0.4rem;
+            }
         }
     }
 }
 .my-description {
     position: absolute;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 1rem;
+    right: 1rem;
     width: 50%;
     max-width: 240px;
     height: 80%;
